@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgoritmoKmeans", "AlgoritmoKmeans.csproj", "{DD694647-C50D-4FE5-BF63-C417756D1AA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD694647-C50D-4FE5-BF63-C417756D1AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD694647-C50D-4FE5-BF63-C417756D1AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD694647-C50D-4FE5-BF63-C417756D1AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD694647-C50D-4FE5-BF63-C417756D1AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {337F3C54-003E-4713-86B0-D6412A75F105}
+	EndGlobalSection
+EndGlobal

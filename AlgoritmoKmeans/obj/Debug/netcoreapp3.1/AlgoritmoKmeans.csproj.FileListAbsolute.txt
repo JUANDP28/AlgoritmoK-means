@@ -1,0 +1,4 @@
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.csprojAssemblyReference.cache
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.AssemblyInfoInputs.cache
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.AssemblyInfo.cs
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.csproj.CoreCompileInputs.cache
