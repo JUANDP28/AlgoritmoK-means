@@ -175,20 +175,54 @@ namespace AlgoritmoKmeans {
                 auxiliaryB = GetElementWithDistance(versicolor);
                 auxiliaryC = GetElementWithDistance(virginica);
             }
-            setosa.Clear();
-            versicolor.Clear();
-            virginica.Clear();
-            if(centroidA.Equals(auxiliaryA) &&
-               centroidB.Equals(auxiliaryB) &&
-               centroidC.Equals(auxiliaryC)) {
-                return true;
+            if(centroidA != null) {
+                if(centroidA.Equals(auxiliaryA) && centroidB.Equals(auxiliaryB) && centroidC.Equals(auxiliaryC)) {
+                    return true;
+                } else {
+                    setosa.Clear();
+                    versicolor.Clear();
+                    virginica.Clear();
+                    centroidA = auxiliaryA;
+                    centroidB = auxiliaryB;
+                    centroidC = auxiliaryC;
+                    return false;
+                }
             } else {
+                setosa.Clear();
+                versicolor.Clear();
+                virginica.Clear();
+                centroidA = auxiliaryA;
+                centroidB = auxiliaryB;
+                centroidC = auxiliaryC;
                 return false;
             }
         }
 
         public Element GetElementWithDistance(List<Element> list) {
-            return null;
+            Double sumDistance = 0.0, halfDistance;
+            foreach(Element element in list) {
+                sumDistance += element.distance;
+            }
+            halfDistance = sumDistance / list.Count;
+            foreach(Element element in list) {
+                if(element.distance == halfDistance) {
+                    return element;
+                }
+            }
+            int position = 1, closenessElement = 0;
+            Double closeness = 0.0;
+            foreach(Element element in list) {
+                if(position == 1) {
+                    closeness = ((halfDistance - element.distance) * -1);
+                    closenessElement = position;
+                } else {
+                    if(closeness > ((halfDistance - element.distance) * -1)) {
+                        closeness = ((halfDistance - element.distance) * -1);
+                        closenessElement = position;
+                    }
+                }
+            }
+            return GetElement(list, closenessElement);
         }
 
         public Element GetElement(List<Element> list, int position) {
@@ -209,12 +243,15 @@ namespace AlgoritmoKmeans {
                 distanceA = CalculateDistance(centroidA, element);
                 distanceB = CalculateDistance(centroidB, element);
                 distanceC = CalculateDistance(centroidC, element);
-                if(distanceA > distanceB && distanceA > distanceC) {
+                if(distanceA < distanceB && distanceA < distanceC) {
+                    element.distance = distanceA;
                     setosa.Add(element);
                 } else {
-                    if(distanceB > distanceA && distanceB > distanceC) {
+                    if(distanceB < distanceA && distanceB < distanceC) {
+                        element.distance = distanceB;
                         versicolor.Add(element);
                     } else {
+                        element.distance = distanceC;
                         virginica.Add(element);
                     }
                 }
@@ -222,24 +259,57 @@ namespace AlgoritmoKmeans {
         }
 
         public Double CalculateDistance(Element elementP, Element elementE) {
-
             double sum = 0;
-
             for(int i = 0; i < elementP.rows.Length; i++) {
-
                 sum += Math.Pow((elementP.rows[i] - elementE.rows[i]), 2);
             }
-
             return Math.Sqrt(sum);
         }
 
+        public void PrintClustering() {
+            Console.WriteLine("");
+            Console.WriteLine("SSE: " + NumberOfErrors());
+            Console.WriteLine("SETOSA: " + setosa.Count);
+            Console.WriteLine("VERSICOLOR: " + versicolor.Count);
+            Console.WriteLine("VIRGINICA: " + virginica.Count);
+            Console.WriteLine();
+            setosa.Clear();
+            versicolor.Clear();
+            virginica.Clear();
+        }
+
+        public int NumberOfErrors() {
+            int errors = 0;
+            foreach(Element element in setosa) {
+                if(element.name != "Setosa") {
+                    errors++;
+                }
+            }
+            foreach(Element element in versicolor) {
+                if(element.name != "Versicolor") {
+                    errors++;
+                }
+            }
+            foreach(Element element in virginica) {
+                if(element.name != "Virginica") {
+                    errors++;
+                }
+            }
+            return errors;
+        }
+
         static void Main(string[] args) {
+            Console.WriteLine("");
+            Console.WriteLine("=============== ALGORITMO K-MEANS ===============");
+            Console.WriteLine("");
             for(int i = 0; i < 10; i++) {
+                Console.WriteLine("NÚMERO DE EJECUCIÓN: " + (i + 1));
                 Program algorithm = new Program();
                 algorithm.LoadData();
                 while(algorithm.SelectCentroid() != true) {
                     algorithm.CreateClusters();
                 }
+                algorithm.PrintClustering();
             }
         }
     }

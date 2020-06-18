@@ -2,3 +2,12 @@ C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netco
 C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.AssemblyInfoInputs.cache
 C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.AssemblyInfo.cs
 C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.csproj.CoreCompileInputs.cache
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\bin\Debug\netcoreapp3.1\AlgoritmoKmeans.exe
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\bin\Debug\netcoreapp3.1\AlgoritmoKmeans.deps.json
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\bin\Debug\netcoreapp3.1\AlgoritmoKmeans.runtimeconfig.json
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\bin\Debug\netcoreapp3.1\AlgoritmoKmeans.runtimeconfig.dev.json
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\bin\Debug\netcoreapp3.1\AlgoritmoKmeans.dll
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\bin\Debug\netcoreapp3.1\AlgoritmoKmeans.pdb
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.dll
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.pdb
+C:\Users\juanc\Documents\GitHub\AlgoritmoK-means\AlgoritmoKmeans\obj\Debug\netcoreapp3.1\AlgoritmoKmeans.genruntimeconfig.cache
